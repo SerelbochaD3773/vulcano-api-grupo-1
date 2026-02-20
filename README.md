@@ -47,10 +47,10 @@
 | Nombre | Rol principal | Usuario GitHub |
 | :--- | :--- | :--- |
 | Mario Múnera | Líder / Backend | [@MarioMunera1993](https://github.com/MarioMunera1993) |
-| [Nombre 2] | Frontend Lead | @[usuario] |
-| [Nombre 3] | Backend / DB Specialist | @[usuario] |
-| [Nombre 4] | QA / Tester | @[usuario] |
-| [Nombre 5] | UI/UX Designer | @[usuario] |
+| Albany Luciani | Frontend Lead | [@albanyluciani1] |
+| Roque Aldana | Backend / DB Specialist | [@Julio28012020] |
+| Julio Correa | QA / Tester | [@Julio] |
+| Sergio Montoya | UI/UX Designer | [@Sergio] |
 
 ## 📊 Diagrama de Clases del Dominio (v1)
 

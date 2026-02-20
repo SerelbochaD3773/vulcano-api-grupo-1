@@ -84,48 +84,6 @@
 
 *Diagrama que contempla las entidades: Usuario, Reseña, Desafío y Progreso Académico. Los IDs utilizan `@GeneratedValue` y las entidades clave incluyen atributos de auditoría `createdAt`/`updatedAt`.*
 
-> 📁 El archivo se encuentra en `docs/diagrama-dominio-v1.png`. Para regenerarlo, usa [Mermaid Live Editor](https://mermaid.live) con el siguiente código fuente:
->
-> ```mermaid
-> classDiagram
->     class User {
->         +@GeneratedValue Long id
->         +String username
->         +String email
->         +String password
->         +LocalDateTime createdAt
->         +LocalDateTime updatedAt
->         +register()
->         +login()
->     }
->     class Challenge {
->         +@GeneratedValue Long id
->         +String title
->         +String description
->         +String difficulty
->         +String baseCode
->         +validateSolution()
->     }
->     class Review {
->         +@GeneratedValue Long id
->         +String comment
->         +int rating
->         +LocalDateTime createdAt
->         +LocalDateTime updatedAt
->         +createReview()
->     }
->     class AcademicProgress {
->         +@GeneratedValue Long id
->         +String status
->         +Double score
->         +Date completionDate
->         +updateProgress()
->     }
->     User "1" -- "*" Review : writes
->     User "1" -- "*" AcademicProgress : tracks
->     Challenge "1" -- "*" AcademicProgress : involves
-> ```
-
 ---
 
 ## 🚀 Instrucciones de Instalación y Ejecución

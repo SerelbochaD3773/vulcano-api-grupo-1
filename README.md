@@ -1,53 +1,109 @@
-# VULCANO-API
-[Plataforma de gamificación educativa para fortalecer la lógica de programación mediante desafíos interactivos]
+# 🌋 vulcano-api-grupo-1
+**Plataforma de gamificación educativa para fortalecer la lógica de programación mediante desafíos interactivos.**
 
-## Introducción / Contexto
-Descripción del problema: Los estudiantes de la carrera técnica en desarrollo de software enfrentan dificultades para consolidar conocimientos teóricos del primer semestre de forma motivadora.
+---
 
-Justificación: Es relevante para promover la interacción y motivación mediante dinámicas lúdicas, reduciendo la brecha entre la teoría y la práctica creativa.
+## 📌 Introducción / Contexto
 
-Descripción del dominio: El proyecto se centra en la educación técnica laboral, específicamente en el desarrollo de software y lógica de programación.
+* **Descripción del problema:** Los estudiantes de desarrollo de software enfrentan dificultades para consolidar conocimientos teóricos de forma motivadora, existiendo una brecha significativa entre la teoría impartida y su aplicación práctica creativa.
+* **Justificación:** VULCANO API surge para promover la interacción y motivación mediante dinámicas lúdicas que reducen esa brecha, integrando el aprendizaje con experiencias gamificadas.
+* **Contexto:** Proyecto académico desarrollado para la Carrera Técnica en Desarrollo de Software.
 
-## Objetivos
-Objetivo General
-[Desarrollar e implementar una plataforma digital de gamificación académica para la carrera técnica laboral en desarrollo de software, con el fin de fortalecer el aprendizaje de los contenidos teóricos del primer semestre.]
+## 🎯 Objetivos
 
-Objetivos Específicos
+**Objetivo General** Desarrollar e implementar una plataforma web de gamificación académica que fortalezca el aprendizaje de contenidos teóricos mediante una arquitectura cliente–servidor, utilizando React y Java Spring Boot.
 
-OE1: Diseñar y planificar actividades lúdicas grupales e individuales que refuercen los conocimientos de las materias del primer semestre.
+**Objetivos Específicos** 
+* **OE1:** Diseñar actividades lúdicas grupales e individuales integradas en una interfaz web dinámica y responsiva.
+* **OE2:** Aplicar metodologías ágiles durante el desarrollo para garantizar la adaptación continua a los requerimientos.
+* **OE3:** Evaluar y ajustar continuamente el funcionamiento de la plataforma mediante pruebas funcionales y retroalimentación de usuarios.
+* **OE4:** Implementar funcionalidades interactivas para gestión de reseñas, desafíos académicos y ejecución de código en tiempo real con una API REST.
 
-OE2: Utilizar metodologías ágiles en el desarrollo de la plataforma web para asegurar la adaptación continua y optimización de procesos.
+## 📐 Alcance del Proyecto (Scope)
 
-OE3: Evaluar y ajustar constantemente el funcionamiento de la plataforma para mejorar la interacción estudiante-contenido.
+**Qué se va a desarrollar:**
+* Plataforma web interactiva construida con React, JavaScript y Tailwind CSS.
+* Arquitectura cliente–servidor con API REST desarrollada en Java Spring Boot y JPA.
+* Gestión de datos con Prisma para modelado de usuarios, reseñas y desafíos.
+* Sistema CRUD académico completo para contenidos y retos.
+* Módulo de desafíos interactivos con editor de código en el navegador.
+* Sistema de autenticación y validación de usuarios.
 
-OE4: Implementar funcionalidades interactivas de JavaScript para la gestión de reseñas, desafíos y ejecución de código en tiempo real.
+**Qué NO se va a desarrollar (Fuera de alcance):**
+* Entorno de ejecución de código en servidor con sandbox seguro.
+* Evaluación automática con inteligencia artificial.
+* Aplicación móvil nativa.
+* Despliegue en infraestructura de alta disponibilidad.
 
-## Alcance del Proyecto (Scope)
-Qué se va a desarrollar:
+## 🛠️ Tecnologías y Herramientas (Tech Stack)
 
-Plataforma web con estructura semántica HTML5 y estilos bajo metodología BEM.
+* **Backend:** Java Spring Boot, JPA, Maven.
+* **Frontend:** React, JavaScript (ES6+), Tailwind CSS.
+* **Base de Datos:** PostgreSQL (Prisma) para producción y H2 para desarrollo inicial.
+* **Control de Versiones:** Git y GitHub.
 
-Sistema CRUD para la gestión de reseñas y citas académicas mediante API REST (Mock).
+## 👥 Integrantes del Equipo
 
-Módulo de desafíos con editor de código integrado y captura de consola.
+| Nombre | Rol principal | Usuario GitHub |
+| :--- | :--- | :--- |
+| Mario Múnera | Líder / Backend | [@MarioMunera1993](https://github.com/MarioMunera1993) |
+| [Nombre 2] | Frontend Lead | @[usuario] |
+| [Nombre 3] | Backend / DB Specialist | @[usuario] |
+| [Nombre 4] | QA / Tester | @[usuario] |
+| [Nombre 5] | UI/UX Designer | @[usuario] |
 
-Interfaz responsiva con menú tipo hamburguesa y animaciones interactivas.
+## 📊 Diagrama de Clases del Dominio (v1)
 
-Formularios de registro y login con validaciones de cliente.
 
-Qué NO se va a desarrollar en esta versión (fuera de alcance):
 
-Base de datos relacional persistente propia (se utiliza MockAPI).
+![Diagrama de Dominio v1](docs/diagrama-dominio-v1.png)  
+*Diagrama inicial que contempla las entidades: Usuario, Reseña, Desafío y Progreso Académico.*
 
-Entorno de ejecución de código en servidor (aislado por eval() local).
+## 🚀 Instrucciones de Instalación y Ejecución
 
-Funcionalidades de backend real (Spring Boot/Java) en esta fase inicial.
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/MarioMunera1993/vulcano-api-grupo-1.git
+```
 
-## Tecnologías y Herramientas (Tech Stack)
-Backend: MockAPI (REST API) para simulación de persistencia de datos en CRUDs.
+### 2. Entrar al directorio
+```bash
+cd vulcano-api-grupo-1
+```
 
-Frontend: HTML5 semántico, CSS3 (Variables, BEM), JavaScript Vanilla (ES6+, Async/Await).
+### 3. Configurar base de datos
 
-Base de datos: Endpoints de MockAPI para almacenamiento temporal de objetos JSON.
+Configura el archivo `src/main/resources/application-dev.properties` con los siguientes datos:
 
-Otras herramientas: Git, GitHub, IntersectionObserver API, y utilidades de estilo 3D (Tailwind Plugins).
+**Opción PostgreSQL (Prisma Cloud):**
+```properties
+spring.datasource.url=jdbc:postgresql://db.prisma.io:5432/postgres?sslmode=require
+spring.datasource.username=961bb5fffbad150fbf36b6fd78def9bfb9acdfdd978a31c4bbe2a16ccb555781
+spring.datasource.password=sk_KdSlYnC95TUP4M9P3IV8n
+spring.jpa.hibernate.ddl-auto=update
+```
+
+**Opción H2 (Pruebas locales):**
+```properties
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=true
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### 4. Ejecutar la aplicación
+
+Desde la terminal:
+```bash
+./mvnw spring-boot:run
+```
+
+O desde su IDE ejecutando: **Run → VulcanoApiApplication**.
+
+---
+
+## 📄 Licencia
+
+MIT License *(Recomendada para proyectos académicos).*
